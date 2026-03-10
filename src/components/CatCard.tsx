@@ -26,7 +26,7 @@ export function CatCard({ cat, onLike, onDislike, imageLoaded, setImageLoaded }:
   return (
     <div
       {...handlers}
-      className="w-full max-w-md mx-auto h-[500px] md:h-auto md:aspect-[3/4] relative bg-white rounded-2xl shadow-xl overflow-hidden touch-none"
+      className="w-full max-w-md mx-auto h-[500px] md:h-auto md:aspect-[3/4] relative bg-white rounded-2xl shadow-xl overflow-hidden touch-pan-y"
     >
       {/* Loading Overlay */}
       {!imageLoaded && (

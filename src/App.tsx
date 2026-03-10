@@ -157,11 +157,11 @@ function App() {
     const currentCat = cats[currentIndex];
 
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+      <div className="min-h-[100dvh] flex flex-col items-center justify-start overflow-y-auto py-8 px-4">
         {currentCat ? (
-          <div className="w-full max-w-6xl flex flex-col items-center">
+          <div className="w-full max-w-6xl flex flex-col items-center my-auto">
 
-            <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+            <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-4">
               {/* Name and Age */}
               <div className="hidden md:flex flex-col items-end text-right w-64">
                 <h2 className="text-6xl font-black text-amber-900 bg-amber-300 p-4 rounded-xl -rotate-3 mb-2 shadow-lg">
@@ -259,11 +259,15 @@ function App() {
     return (
       <div className="min-h-screen py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-4 bg-amber-200 rotate-1 p-2">
+          <div className="text-center mb-10 overflow-hidden px-2">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-4 bg-amber-200 rotate-1 p-2 inline-block">
               Out of 10 cats, you liked {liked.length} of 'em!
             </h2>
-            <p className="text-gray-600 text-lg bg-amber-300 -rotate-2 p-2 w-100 mx-auto">Now let's see the little rascals that managed to catch your attention.</p>
+            <div className="mt-2">
+              <p className="text-gray-600 text-lg bg-amber-300 p-2 w-full max-w-[280px] sm:max-w-xs md:max-w-sm mx-auto inline-block">
+                Now let's see the little rascals that managed to catch your attention.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap">
